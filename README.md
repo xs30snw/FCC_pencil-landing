@@ -1,5 +1,9 @@
-# FCC_pencilLanding
+# FreeCodeCamp - Pencil Landing Page
 
-Based on my task at FreeCodeCamp, where you create a landing page project with responsive design.
+This is a solution to the Responsive Design Series at [FreeCodeCamp](https://www.freecodecamp.org/learn). The page is built using basic HTML and CSS.
 
-[Preview on Pages](https://xs30snw.github.io/FCC_pencilLanding/).
+- Live Site URL: [GitHub Pages](https://xs30snw.github.io/FCC_pencil-landing/)
+
+## Screenshot
+
+![](./screenshot.png)
