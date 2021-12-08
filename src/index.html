@@ -15,77 +15,124 @@
         <div class="wrapper">
 
             <header id="header">
-                <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Pencils_hb.jpg/220px-Pencils_hb.jpg">
+                <div id="headerContainer" class="container">
+                
+                    <img id="header-img" src="<%=require('./assets/logo.svg')%>" alt="Pencil-HB logo">
+                    <h1>PencilHB-Hypothetical-Shop</h1>
+                    
+                    <nav id="nav-bar">
 
-                <h2>PencilHB-Hypothetical-Shop</h2>
+                        <h2 class="visuallyHidden">Site navigation</h2>
+                        <ul>
 
-                <nav id="nav-bar">
-                    <ul>
-                        <li>
-                            <a class="nav-link" href="#pencil-hb">About</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#description">Product</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#subscribe">Buy</a>
-                        </li>
-                    </ul>
-                </nav>
+                            <!-- SITE NAVIGATION -->
+                            <li>
+                                <a class="nav-link" href="#hero">About</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#product">Product</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#subscribe">Buy</a>
+                            </li>
+                        </ul>
+                    </nav> 
+
+                </div>
             </header>
 
             <main id="main">
 
-                <section id="pencil-hb">
-                    <video id="video" autoplay muted loop width="420" height="315">
-                        <!-- Video is taken from TED's Youtube channel:
-                            https://www.youtube.com/watch?v=IBf9pXOmpFw
-                            cropped the time range 107 - 118 seconds    -->
+                <section id="hero" class="container center scroll">
+
+                    <h2 class="visuallyHidden">Looped video of drawing with different pencils</h2>
+                    <svg class="clipping-paths">
+
+                        <!-- PENCIL HERO -->
+                        <defs>
+                            <clipPath id="clip-00" clipPathUnits="objectBoundingBox" transform="scale(0.00078125, 0.0013888888888889)">
+                                <path d="m 49.424485,104.58796 h 92.931535 q 37.69864,0 57.86303,8.51906 20.38356,8.51894 30.46576,24.61031 10.30138,16.09153 13.80823,39.12434 3.72603,22.71732 3.72603,70.67609 v 44.48798 q 0,48.90543 -7.01371,71.30724 -7.0137,22.40182 -25.86302,34.39139 -18.63014,11.98974 -48.87672,11.98974 H 141.69848 V 615.4121 H 49.424485 Z m 92.273995,87.39859 v 129.99344 q 3.94521,0.31501 6.79453,0.31501 12.71233,0 17.53425,-8.83443 5.0411,-9.15009 5.0411,-37.54669 v -41.96399 q 0,-26.18795 -5.69864,-34.07589 -5.69863,-7.88794 -23.67124,-7.88794 z" />
+                                <path d="m 274.73962,104.58796 h 153.86306 v 102.22797 h -61.58907 v 96.86404 h 57.64386 v 97.17971 H 367.01361 V 513.1841 h 67.72606 v 102.228 H 274.73962 Z" />
+                                <path d="M 667.28766,104.58796 V 615.4121 H 586.41095 L 538.41093,383.19065 V 615.4121 H 461.26022 V 104.58796 h 77.15071 l 51.72604,230.01276 V 104.58796 Z" />
+                                <path d="m 919.78088,327.34378 h -92.27393 v -88.97611 q 0,-38.80868 -3.06852,-48.27427 -2.84936,-9.78109 -12.93158,-9.78109 -11.39721,0 -14.46573,11.67424 -3.06853,11.67407 -3.06853,50.48292 V 479.7392 q 0,37.2312 3.06853,48.58977 3.06852,11.35874 13.80823,11.35874 10.30139,0 13.36991,-11.35874 3.28769,-11.35857 3.28769,-53.32256 v -64.05015 h 92.27393 v 19.87751 q 0,79.19519 -7.89036,112.32458 -7.6713,33.1294 -34.41101,58.05536 -26.52054,24.92597 -65.53422,24.92597 -40.54795,0 -66.84932,-21.13983 -26.30138,-21.13966 -34.84934,-58.37086 -8.54796,-37.54669 -8.54796,-112.63992 V 284.74896 q 0,-55.21572 2.63008,-82.66583 2.63019,-27.76561 15.56166,-53.32256 13.15074,-25.55696 36.16444,-40.07084 23.23285,-14.829398 53.26024,-14.829398 40.76711,0 67.28776,22.717328 26.52054,22.71732 34.84923,56.79321 8.3288,33.76055 8.3288,105.38314 z" />
+                                <path d="M 1045.1508,104.58796 V 615.4121 H 952.87679 V 104.58796 Z" />
+                                <path d="M 1174.4659,104.58796 V 513.1841 h 56.1096 v 102.228 H 1082.1919 V 104.58796 Z" />
+                                <path d="m 460.32516,37.142616 h 359.34968 v 27.42034 H 460.32516 Z" />
+                                <path d="m 460.32516,655.43701 h 359.34968 v 27.42034 H 460.32516 Z" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    <video id="video" autoplay muted loop playsinline poster="<%=require('./assets/poster.jpg')%>">
+                    <!-- Video is taken from TED's Youtube channel:
+                        https://www.youtube.com/watch?v=IBf9pXOmpFw
+                        cropped the time range 107 - 118 seconds    -->
                         <source src="<%=require('./assets/pencil.mp4')%>">
                     </video>
+
                 </section>
 
-                <section id="description">
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni perspiciatis reprehenderit dolor quis omnis aliquid?
-                    </p>
-                    <div class="product" tabindex="-1">
-                        <h1>H+</h1>
+                <section id="product" class="center scroll">
+                    <div id="productContainer" class="container">
+
                         <p>
-                            The hard lead makes pencil ideal for drawing outlines and shading.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni perspiciatis reprehenderit dolor quis omnis aliquid?
                         </p>
-                    </div>
-                    <div class="product" tabindex="-1">
-                        <h1>HB</h1>
-                        <p>
-                            Pencils of medium hardness, ideal for general use and sketches. 
-                        </p>
-                    </div>
-                    <div class="product" tabindex="-1">
-                        <h1>B+</h1>
-                        <p>
-                            With the soft lead, artists can draw fine details and shadows.
-                        </p>
+
+                        <!-- PRODUCT CARDS -->
+                        <div class="productCard" tabindex="-1">
+                            <h2>H+</h2>
+                            <p>
+                                The hard lead makes pencil ideal for drawing outlines and shading.
+                            </p>
+                        </div>
+
+                        <div class="productCard" tabindex="-1">
+                            <h2>HB</h2>
+                            <p>
+                                Pencils of medium hardness, good for general use and sketches. 
+                            </p>
+                        </div>
+
+                        <div class="productCard" tabindex="-1">
+                            <h2>B+</h2>
+                            <p>
+                                With the soft lead, artists can draw fine details and shadows.
+                            </p>
+                        </div>
+                        
                     </div>
                 </section>
 
-                <section id="subscribe">
-                    <p>
-                        Subscribe to our newsletters to purchase the pencils when they are available.
-                    </p>
-                    <form id="form" method="POST" action="https://www.freecodecamp.com/email-submit">
-                        <label for="email">Please, enter your e-mail adress:</label>
-                        <input id="email" name="email" type="email" placeholder="example@gmail.com" required>
-                        <input id="submit" type="submit" value="Submit">
-                    </form>
+                <section id="subscribe" class="center scroll">
+                    <div id="subscribeContainer" class="container">
+
+                        <h2 class="visuallyHidden">Subscribe to newsletters</h2>
+                        <p>
+                            Subscribe to newsletters and receive notifications as soon as our product is available.
+                        </p>
+
+                        <!-- EMAIL FORM -->
+                        <form id="form" method="POST" action="https://www.freecodecamp.com/email-submit">
+                            <label for="email">Enter your e-mail adress:</label>
+                            <input id="email" name="email" type="email" placeholder="example@gmail.com" required>
+                            <input id="submit" type="submit" class="button" value="Submit">
+                        </form>
+
+                    </div>
                 </section>
                 
             </main>
 
             <footer>
-                <p>
-                    Created by <em>xs30snw</em> for FreeCodeCamp as a part of Responsive Web Design projects.
-                </p>
+                <div id="footerContainer" class="container">
+
+                    <h2 class="visuallyHidden">Website annotation</h2>
+                    <p>
+                        Created by <em>xs30snw</em> for FreeCodeCamp as a part of Responsive Web Design projects.
+                    </p>
+                    
+                </div>
             </footer>
 
         </div>
